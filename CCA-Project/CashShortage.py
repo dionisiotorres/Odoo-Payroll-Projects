@@ -5,3 +5,9 @@ for line in payslip.input_line_ids:
         
 if a > 0:
     result = True
+    
+# Computation
+if result:
+    for line in payslip.input_line_ids:
+        if line.code == 'SHORTAGE':
+            result = line.amount
