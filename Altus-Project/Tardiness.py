@@ -1,9 +1,11 @@
+# Condition
 result = False
 if payslip.input_line_ids:
     for line in payslip.input_line_ids:
         if line.code == 'TARD' or line.code == 'UNDT' and line.amount:
             result = True
 
+# Computation
 if result:
     minutes_late = 0
     for line in payslip.input_line_ids:
